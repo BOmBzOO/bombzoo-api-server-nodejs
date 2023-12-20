@@ -1,11 +1,11 @@
 import 'dotenv/config';
 
-import https from 'https';
+import http from 'http';
 import server from './server';
 
 const { PORT } = process.env;
 
-https.createServer({
+http.createServer({
 }, server)
   .listen(PORT, () => {
     console.log(`Server is listening on port ${PORT}`);
